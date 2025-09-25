@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank Chaurasiya - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e0e0e0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #000428, #004e92, #3a0ca3, #f72585);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .glass-card {
+            background: rgba(22, 29, 47, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+
+        .accent-color {
+            color: #f72585; /* Vibrant Pink */
+        }
+
+        .section-heading {
+            color: #ffffff;
+        }
+
+        /* Custom animation for fade-in effect on scroll */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-element {
+            animation: fadeIn 0.7s ease-out forwards;
+            opacity: 0;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 15px rgba(247, 37, 133, 0.5), 0 0 5px rgba(247, 37, 133, 0.8);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="animated-bg"></div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="glass-card fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold tracking-tight text-white">Shashank Chaurasiya</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
+                <a href="#contact" class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 glow-on-hover">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
+            <a href="#contact" class="block mt-2 bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 px-4 rounded-lg text-center glow-on-hover">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center pt-20">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+                        Hi, I'm <span class="accent-color">Shashank Chaurasiya</span>
+                    </h1>
+                    <p id="typewriter" class="text-xl md:text-2xl text-gray-200 mb-12 h-8"></p>
+                    
+                    <a href="#projects" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 inline-block transform hover:scale-105 glow-on-hover">View My Work</a>
+                </div>
+                <div class="md:w-1/3">
+                    <!-- 
+                        HOW TO ADD YOUR PHOTO:
+                        1. Upload your photo to a service like Imgur (https://imgur.com/upload).
+                        2. After uploading, right-click the image and select "Copy Image Address".
+                        3. Replace the `src` value below with the copied image address.
+                    -->
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-2xl opacity-75 animate-pulse"></div>
+                        <img src="https://github.com/Shashankcode9/my-images/blob/main/789.jpg?raw=true" alt="Your Name - Professional Headshot" class="relative rounded-full shadow-2xl mx-auto border-4 border-white/20">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="glass-card p-8 md:p-12">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold section-heading">About Me</h2>
+                        <div class="h-1 w-24 bg-pink-600 mx-auto mt-4 rounded"></div>
+                    </div>
+                    <div class="max-w-3xl mx-auto text-center text-lg text-gray-200 leading-relaxed">
+                        <p>
+                            I'm a passionate Backend and Flutter Developer dedicated to building robust, scalable server-side applications and beautiful, high-performance mobile apps. I thrive on solving complex logical challenges and architecting efficient systems. Whether it's creating powerful APIs or crafting smooth user interfaces with Flutter, I'm driven by a desire to build things that work exceptionally well.
+                        </p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-heading">My Skills</h2>
+                    <div class="h-1 w-24 bg-pink-600 mx-auto mt-4 rounded"></div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto">
+                    <!-- Your Skills -->
+                    <div class="glass-card flex flex-col items-center p-6 text-center transition-transform transform hover:-translate-y-2">
+                        <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                        <span class="font-medium text-gray-200">Spring Boot</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center p-6 text-center transition-transform transform hover:-translate-y-2">
+                        <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium text-gray-200">Flutter</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center p-6 text-center transition-transform transform hover:-translate-y-2">
+                        <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <span class="font-medium text-gray-200">Java</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center p-6 text-center transition-transform transform hover:-translate-y-2">
+                        <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                        <span class="font-medium text-gray-200">Dart</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center p-6 text-center transition-transform transform hover:-translate-y-2">
+                         <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                        <span class="font-medium text-gray-200">REST APIs</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center p-6 text-center transition-transform transform hover:-translate-y-2">
+                        <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7s-.928 2.33 0 4c.928 1.67 8 4 8 4s7.072-2.33 8-4c.928-1.67 0-4 0-4"></path></svg>
+                        <span class="font-medium text-gray-200">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-heading">My Projects</h2>
+                    <div class="h-1 w-24 bg-pink-600 mx-auto mt-4 rounded"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="glass-card overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111827/f72585?text=Library+Management" alt="Library Management System Project Screenshot" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Library Management System</h3>
+                            <p class="text-gray-300 mb-4">A comprehensive system to manage books, borrowers, and library operations efficiently, built with a robust backend.</p>
+                            <a href="https://github.com/Shashankcode9/Library-management-System-API" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="glass-card overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111827/f72585?text=Doctor+Diagnosis" alt="Doctor Diagnosis System Project Screenshot" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Doctor Diagnosis System</h3>
+                            <p class="text-gray-300 mb-4">An application designed to assist in medical diagnosis by managing patient data and symptoms systematically.</p>
+                            <a href="https://github.com/Shashankcode9/Dr.Diagnosis_Authentication_API" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="glass-card overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111827/f72585?text=E-Voting+System" alt="E-Voting System Project Screenshot" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">E-Voting System</h3>
+                            <p class="text-gray-300 mb-4">A secure and reliable electronic voting system to conduct online polls and elections with integrity.</p>
+                            <a href="https://github.com/Shashankcode9/E-Voting-System-using-Spring-Boot" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="glass-card overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111827/f72585?text=Edtrackk+Clone" alt="Edtrackk Clone Project Screenshot" class="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Edtrackk Clone</h3>
+                            <p class="text-gray-300 mb-4">A clone of the Edtrackk platform, focusing on replicating key features and user interface elements with modern technologies.</p>
+                            <a href="https://github.com/Shashankcode9/Edtrak_Clone_UI" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 font-semibold">View Project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="glass-card max-w-3xl mx-auto p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold section-heading">Get In Touch</h2>
+                        <div class="h-1 w-24 bg-pink-600 mx-auto mt-4 rounded"></div>
+                        <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">I'm currently available for freelance work and open to new opportunities. Have a project in mind? Let's talk!</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="mailto:your.email@example.com" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform duration-300 transform hover:scale-105 glow-on-hover">
+                            code.shashankchourasiya@gmail.com
+                        </a>
+                        <div class="flex justify-center space-x-6 mt-8">
+                            <!-- Replace '#' with your social media links -->
+                            <a href="https://github.com/Shashankcode9" class="text-gray-400 hover:text-pink-400 transition-colors duration-300"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.013c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.013C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg></a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-400">
+        <p>&copy; <span id="currentYear"></span> Shashank Chaurasiya. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Typewriter effect
+            const typewriterElement = document.getElementById('typewriter');
+            const textToType = "A Passionate Backend & Flutter Developer";
+            let index = 0;
+            function type() {
+                if (typewriterElement && index < textToType.length) {
+                    typewriterElement.innerHTML += textToType.charAt(index);
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+            if(typewriterElement) type();
+            
+            // Fade-in animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-element');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const elementsToAnimate = document.querySelectorAll('section > .container > div');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
+
