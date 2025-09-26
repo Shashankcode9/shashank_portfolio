@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +12,7 @@
         body {
             font-family: 'Inter', sans-serif;
             color: #e0e0e0;
-            overflow-x: hidden;
-            /* Prevent horizontal scroll */
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         
         .animated-bg {
@@ -28,17 +26,11 @@
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
         }
-        
+
         @keyframes gradient-animation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
         .glass-card {
@@ -48,39 +40,30 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1rem;
         }
-        
+
         .accent-color {
-            color: #f72585;
-            /* Vibrant Pink */
+            color: #f72585; /* Vibrant Pink */
         }
-        
+
         .section-heading {
             color: #ffffff;
         }
+
         /* Custom animation for fade-in effect on scroll */
-        
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
         .fade-in-element {
             animation: fadeIn 0.7s ease-out forwards;
             opacity: 0;
         }
-        
+
         .glow-on-hover:hover {
             box-shadow: 0 0 15px rgba(247, 37, 133, 0.5), 0 0 5px rgba(247, 37, 133, 0.8);
         }
     </style>
 </head>
-
 <body class="antialiased">
     <div class="animated-bg"></div>
 
@@ -113,7 +96,7 @@
                         Hi, I'm <span class="accent-color">Shashank Chaurasiya</span>
                     </h1>
                     <p id="typewriter" class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-12 h-14 sm:h-8"></p>
-
+                    
                     <a href="#projects" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 inline-block transform hover:scale-105 glow-on-hover">View My Work</a>
                 </div>
                 <div class="md:w-2/5 flex justify-center">
@@ -127,18 +110,17 @@
 
         <section id="about" class="py-16 md:py-20">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="glass-card p-8 md:p-12" data-animate-on-scroll>
+                 <div class="glass-card p-8 md:p-12" data-animate-on-scroll>
                     <div class="text-center mb-12">
                         <h2 class="text-3xl md:text-4xl font-bold section-heading">About Me</h2>
                         <div class="h-1 w-24 bg-pink-600 mx-auto mt-4 rounded"></div>
                     </div>
                     <div class="max-w-3xl mx-auto text-center text-lg text-gray-200 leading-relaxed">
                         <p>
-                            I'm a passionate Backend and Flutter Developer dedicated to building robust, scalable server-side applications and beautiful, high-performance mobile apps. I thrive on solving complex logical challenges and architecting efficient systems. Whether it's
-                            creating powerful APIs or crafting smooth user interfaces with Flutter, I'm driven by a desire to build things that work exceptionally well.
+                            I'm a passionate Backend and Flutter Developer dedicated to building robust, scalable server-side applications and beautiful, high-performance mobile apps. I thrive on solving complex logical challenges and architecting efficient systems. Whether it's creating powerful APIs or crafting smooth user interfaces with Flutter, I'm driven by a desire to build things that work exceptionally well.
                         </p>
                     </div>
-                </div>
+                 </div>
             </div>
         </section>
 
@@ -166,7 +148,7 @@
                         <span class="font-medium text-gray-200 mt-2">Dart</span>
                     </div>
                     <div class="glass-card flex flex-col items-center justify-center p-6 text-center transition-transform transform hover:-translate-y-2">
-                        <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                         <svg class="w-16 h-16 mb-2 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                         <span class="font-medium text-gray-200 mt-2">REST APIs</span>
                     </div>
                     <div class="glass-card flex flex-col items-center justify-center p-6 text-center transition-transform transform hover:-translate-y-2">
@@ -230,7 +212,7 @@
                     </div>
                     <div class="text-center">
                         <a href="mailto:code.shashankchourasiya@gmail.com" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform duration-300 transform hover:scale-105 glow-on-hover">
-                            code.shashankchourasiya@gmail.com
+                            Contact Me
                         </a>
                         <div class="flex justify-center space-x-6 mt-8">
                             <a href="https://github.com/Shashankcode9" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors duration-300"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.013c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.013C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg></a>
@@ -246,7 +228,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
@@ -271,7 +253,6 @@
             if (typewriterElement) {
                 const textToType = "A Passionate Backend & Flutter Developer";
                 let index = 0;
-
                 function type() {
                     if (index < textToType.length) {
                         typewriterElement.innerHTML += textToType.charAt(index);
@@ -281,7 +262,7 @@
                 }
                 type();
             }
-
+            
             // Fade-in animation on scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -299,5 +280,4 @@
         });
     </script>
 </body>
-
 </html>
