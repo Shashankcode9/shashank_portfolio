@@ -29,7 +29,5 @@ It highlights my work as a **Flutter Developer, Java Backend Developer, and Full
 - **Deployment:** Vercel  
 - **Version Control:** Git & GitHub  
 
----
 
-## 📁 Folder Structure
 
